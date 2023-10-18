@@ -14,10 +14,16 @@ class HomeActivity : AppCompatActivity() {
 
         val btnBookKid:Button = findViewById(R.id.buttonmenu1)
         val rvBuku:RecyclerView = findViewById(R.id.recyclerViewBuku)
+        val btnSpace:Button = findViewById(R.id.buttonmenu3)
 
         btnBookKid.setOnClickListener {
             val intentBookKid = Intent(this, BookKidActivity::class.java)
             startActivity(intentBookKid)
+        }
+
+        btnSpace.setOnClickListener {
+            val intentSpace = Intent (this, ResponsiActivity::class.java)
+            startActivity(intentSpace)
         }
 
         rvBuku.layoutManager = LinearLayoutManager(this)
